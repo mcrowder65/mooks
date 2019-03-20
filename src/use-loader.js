@@ -2,10 +2,10 @@ import React from "react";
 
 export function useLoader(apiCall) {
   const [isLoading, setLoading] = React.useState(false);
-  const newApiCall = async () => {
+  const newApiCall = async (...args) => {
     try {
       setLoading(true);
-      await apiCall();
+      await apiCall(...args);
     } catch (e) {
       throw e;
     } finally {

@@ -33,18 +33,21 @@
     }
   },
   "peerDependencies": {
+    "@material-ui/core": "3.9.2",
     "react": "16.8.4",
     "react-dom": "16.8.4"
   },
   "devDependencies": {
     "@babel/cli": "7.2.3",
     "@babel/core": "7.2.2",
+    "@babel/plugin-proposal-class-properties": "7.4.0",
     "@babel/preset-env": "7.3.1",
     "@babel/preset-react": "7.0.0",
+    "@material-ui/core": "3.9.2",
     "babel-jest": "24.0.0",
     "babel-polyfill": "6.26.0",
     "coveralls": "3.0.2",
-    "eslint-config-mcrowder65": "0.0.41",
+    "eslint-config-mcrowder65": "0.0.45",
     "jest": "^24.4.0",
     "jest-dom": "3.0.1",
     "react": "16.8.4",

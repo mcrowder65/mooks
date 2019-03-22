@@ -2,7 +2,7 @@
   "name": "mooks",
   "version": "1.0.2",
   "description": "",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "linter": "eslint src --ext .js",
     "jest": "jest --coverage --silent",

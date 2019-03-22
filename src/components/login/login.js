@@ -9,7 +9,7 @@ import Card from "@material-ui/core/Card";
 import Grid from "@material-ui/core/Grid";
 import withStyles from "@material-ui/core/styles/withStyles";
 
-import { compose } from "./compose";
+import { compose } from "../../compose";
 
 const styles = {
   content: {

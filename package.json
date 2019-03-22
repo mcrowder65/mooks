@@ -17,6 +17,10 @@
     "extends": "mcrowder65"
   },
   "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js"
+    ],
     "setupFilesAfterEnv": [
       "<rootDir>/test/config.js"
     ],
@@ -48,7 +52,7 @@
     "babel-polyfill": "6.26.0",
     "coveralls": "3.0.2",
     "eslint-config-mcrowder65": "0.0.45",
-    "jest": "^24.4.0",
+    "jest": "24.4.0",
     "jest-dom": "3.0.1",
     "react": "16.8.4",
     "react-dom": "16.8.4",

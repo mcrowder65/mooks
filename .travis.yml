@@ -6,7 +6,6 @@ script:
   - npm run linter;
   - npm run jest;
   - npm run coveralls;
-  - rm -rf src
 deploy:
   provider: npm
   email: "$NPM_EMAIL"

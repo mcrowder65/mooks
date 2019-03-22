@@ -9,6 +9,8 @@ import LoaderButton from "./components/loader-button/loader-button";
 import LoaderCard from "./components/loader-card/loader-card";
 import Login from "./components/login/login";
 import Signup from "./components/signup/signup";
+import { hello } from "./hello";
+
 export {
   useArrowKeyListener,
   useCurrentState,
@@ -21,4 +23,5 @@ export {
   LoaderCard,
   Login,
   Signup,
+  hello,
 };

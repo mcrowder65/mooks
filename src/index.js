@@ -8,7 +8,7 @@ import DefaultValue from "./components/default-value/default-value";
 import LoaderButton from "./components/loader-button/loader-button";
 import LoaderCard from "./components/loader-card/loader-card";
 import Login from "./components/login/login";
-
+import Signup from "./components/signup/signup";
 export {
   useArrowKeyListener,
   useCurrentState,
@@ -20,4 +20,5 @@ export {
   LoaderButton,
   LoaderCard,
   Login,
+  Signup,
 };

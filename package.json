@@ -11,7 +11,7 @@
     "linter": "eslint src --ext .js",
     "jest": "jest --coverage --silent",
     "test": "npm run linter && npm run jest",
-    "build": "babel src --out-dir lib --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\"",
+    "build": "babel src --out-dir src --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\"",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "keywords": [],

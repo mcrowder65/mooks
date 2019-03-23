@@ -18,3 +18,7 @@
 
 Reusable javascript utilities that serve [Matt Crowder!](https://twitter.com/mcrowder65)
 
+
+
+#### How to publish to npm
+While on the master branch, run `npm version $versionType`, then run `npm publish`

@@ -1,6 +1,6 @@
 import React from "react";
 
-export function useLoader(apiCall) {
+function useLoader(apiCall) {
   const [isLoading, setLoading] = React.useState(false);
   const newApiCall = async (...args) => {
     try {
@@ -15,3 +15,5 @@ export function useLoader(apiCall) {
 
   return { isLoading, apiCall: newApiCall };
 }
+
+export default useLoader;

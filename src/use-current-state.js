@@ -1,6 +1,6 @@
 import React from "react";
 
-export const useCurrentState = (initialValue) => {
+const useCurrentState = (initialValue) => {
   let actualInitialValue = initialValue;
   if (typeof initialValue === "function") {
     actualInitialValue = initialValue(actualInitialValue);
@@ -20,3 +20,5 @@ export const useCurrentState = (initialValue) => {
   };
   return [() => actualValue.current, theirSetValue];
 };
+
+export default useCurrentState;

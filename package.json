@@ -10,7 +10,6 @@
     "build": "babel src --out-dir lib --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\"",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "postversion": "git push && git push --tags"
-  }
   },
   "files": [
     "lib/**/*"

@@ -3,13 +3,12 @@ import useCurrentState from "./useCurrentState";
 import getElements from "./getElements";
 import useLoader from "./useLoader";
 import sleep from "./sleep";
-import { compose } from "./compose";
+import compose from "./compose";
 import DefaultValue from "./DefaultValue";
 import LoaderButton from "./LoaderButton";
 import LoaderCard from "./LoaderCard";
 import Login from "./Login";
 import Signup from "./Signup";
-import hello from "./hello";
 
 export {
   useArrowKeyListener,
@@ -23,5 +22,4 @@ export {
   LoaderCard,
   Login,
   Signup,
-  hello,
 };

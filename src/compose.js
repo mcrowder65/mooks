@@ -1,5 +1,5 @@
 // copy and paste from redux/compose
-export const compose = (...funcs) => {
+const compose = (...funcs) => {
   if (funcs.length === 0) {
     return (arg) => arg;
   }
@@ -10,3 +10,4 @@ export const compose = (...funcs) => {
 
   return funcs.reduce((a, b) => (...args) => a(b(...args)));
 };
+export default compose;

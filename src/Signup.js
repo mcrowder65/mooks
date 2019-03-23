@@ -22,49 +22,42 @@ const styles = {
 };
 function Signup({ classes, _onSubmit }) {
   return (
-    <div className={classes.content}>
-      <Card className={classes.card}>
-        <Grid>
-          <Typography variant="h4">Sign up</Typography>
-          <form className={classes.content} onSubmit={_onSubmit}>
-            <Grid container alignItems="center" direction="column">
-              <Grid item>
-                <FormControl margin="normal" required fullWidth>
-                  <InputLabel htmlFor="email">Email Address</InputLabel>
-                  <Input
-                    id="email"
-                    name="email"
-                    autoComplete="email"
-                    autoFocus
-                  />
-                </FormControl>
-              </Grid>
-              <Grid item>
-                <FormControl margin="normal" required fullWidth>
-                  <InputLabel htmlFor="password">Password</InputLabel>
-                  <Input
-                    name="password"
-                    type="password"
-                    id="password"
-                    autoComplete="current-password"
-                  />
-                </FormControl>
-              </Grid>
-              <Grid item>
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  color="primary"
-                >
-                  Sign Up
-                </Button>
-              </Grid>
+    <Card className={classes.card}>
+      <Grid>
+        <Typography variant="h4">Sign up</Typography>
+        <form className={classes.content} onSubmit={_onSubmit}>
+          <Grid container alignItems="center" direction="column">
+            <Grid item>
+              <FormControl margin="normal" required fullWidth>
+                <InputLabel htmlFor="email">Email Address</InputLabel>
+                <Input id="email" name="email" autoComplete="email" autoFocus />
+              </FormControl>
             </Grid>
-          </form>
-        </Grid>
-      </Card>
-    </div>
+            <Grid item>
+              <FormControl margin="normal" required fullWidth>
+                <InputLabel htmlFor="password">Password</InputLabel>
+                <Input
+                  name="password"
+                  type="password"
+                  id="password"
+                  autoComplete="current-password"
+                />
+              </FormControl>
+            </Grid>
+            <Grid item>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+              >
+                Sign Up
+              </Button>
+            </Grid>
+          </Grid>
+        </form>
+      </Grid>
+    </Card>
   );
 }
 Signup.propTypes = {

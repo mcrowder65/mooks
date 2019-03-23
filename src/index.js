@@ -1,27 +1,12 @@
-import useArrowKeyListener from "./useArrowKeyListener";
-import useCurrentState from "./useCurrentState";
-import getElements from "./getElements";
-import useLoader from "./useLoader";
-import sleep from "./sleep";
-import compose from "./compose";
-import DefaultValue from "./DefaultValue";
-import LoaderButton from "./LoaderButton";
-import LoaderCard from "./LoaderCard";
-import Login from "./Login";
-import Signup from "./Signup";
-import useLocalStorageSetState from "./useLocalStorageSetState";
-
-export {
-  useArrowKeyListener,
-  useCurrentState,
-  getElements,
-  useLoader,
-  sleep,
-  compose,
-  DefaultValue,
-  LoaderButton,
-  LoaderCard,
-  Login,
-  Signup,
-  useLocalStorageSetState,
-};
+export { default as useArrowKeyListener } from "./useArrowKeyListener";
+export { default as useCurrentState } from "./useCurrentState";
+export { default as getElements } from "./getElements";
+export { default as useLoader } from "./useLoader";
+export { default as sleep } from "./sleep";
+export { default as compose } from "./compose";
+export { default as DefaultValue } from "./DefaultValue";
+export { default as LoaderButton } from "./LoaderButton";
+export { default as LoaderCard } from "./LoaderCard";
+export { default as Login } from "./Login";
+export { default as Signup } from "./Signup";
+export { default as useLocalStorageSetState } from "./useLocalStorageSetState";

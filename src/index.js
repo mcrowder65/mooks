@@ -9,6 +9,7 @@ import LoaderButton from "./LoaderButton";
 import LoaderCard from "./LoaderCard";
 import Login from "./Login";
 import Signup from "./Signup";
+import useLocalStorageSetState from "./useLocalStorageSetState";
 
 export {
   useArrowKeyListener,
@@ -22,4 +23,5 @@ export {
   LoaderCard,
   Login,
   Signup,
+  useLocalStorageSetState,
 };

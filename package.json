@@ -26,6 +26,9 @@
       "src/**/*.js",
       "!src/index.js"
     ],
+    "setupFiles": [
+      "jest-localstorage-mock"
+    ],
     "setupFilesAfterEnv": [
       "<rootDir>/test/config.js"
     ],
@@ -42,6 +45,7 @@
     }
   },
   "peerDependencies": {
+    "jest-localstorage-mock": "2.4.0",
     "@material-ui/core": "3.9.2",
     "react": "16.8.4",
     "react-dom": "16.8.4"
@@ -59,9 +63,13 @@
     "eslint-config-mcrowder65": "0.0.46",
     "jest": "24.4.0",
     "jest-dom": "3.0.1",
+    "jest-localstorage-mock": "2.4.0",
     "react": "16.8.4",
     "react-dom": "16.8.4",
     "react-testing-library": "6.0.0"
   },
-  "babelConfig": ".babelrc.js"
+  "babelConfig": ".babelrc.js",
+  "dependencies": {
+    "store": "2.0.12"
+  }
 }

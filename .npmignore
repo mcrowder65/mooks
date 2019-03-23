@@ -1,1 +1,6 @@
-src
+coverage
+.idea
+test
+.babelrc.js
+.prettierrc.js
+.travis.yml

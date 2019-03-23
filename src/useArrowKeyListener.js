@@ -1,5 +1,5 @@
 import React from "react";
-import useCurrentState from "./use-current-state";
+import useCurrentState from "./useCurrentState";
 const POSSIBLE_KEYS = {
   ARROW_LEFT: "ArrowLeft",
   ARROW_RIGHT: "ArrowRight",

@@ -1,6 +1,6 @@
 import React from "react";
 import sleep from "../sleep";
-import useLoader from "../use-loader";
+import useLoader from "../useLoader";
 import { render, fireEvent, waitForDomChange } from "react-testing-library";
 
 test("that when passing an apiCall, it exposes isLoading, and the enhanced apiCall ", async () => {

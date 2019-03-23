@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent } from "react-testing-library";
-import useCurrentState from "../use-current-state";
+import useCurrentState from "../useCurrentState";
 
 const tester = (Comp) => {
   const { getByTestId, getByText } = render(<Comp />);

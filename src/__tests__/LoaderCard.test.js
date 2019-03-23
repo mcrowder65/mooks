@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "../../test/test-utils";
-import LoaderCard from "../loader-card";
+import LoaderCard from "../LoaderCard";
 
 test("that it renders without errors", () => {
   render(<LoaderCard />);

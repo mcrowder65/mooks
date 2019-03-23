@@ -1,5 +1,5 @@
 import React from "react";
-import getElements from "../get-elements";
+import getElements from "../getElements";
 import { render, fireEvent } from "react-testing-library";
 
 test("that it returns all the things in the form", () => {

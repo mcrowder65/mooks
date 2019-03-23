@@ -1,4 +1,4 @@
-import DefaultValue from "../default-value";
+import DefaultValue from "../DefaultValue";
 
 test("when value is undefined, null is returned", () => {
   expect(DefaultValue({ value: undefined })).toEqual(null);

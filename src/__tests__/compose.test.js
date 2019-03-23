@@ -1,4 +1,4 @@
-import { compose } from "../compose";
+import compose from "../compose";
 
 test("that it doesn't throw when you don't pass anything it doesn't throw", () => {
   const val = compose();

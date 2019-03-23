@@ -18,7 +18,7 @@ const styles = {
     alignItems: "center",
   },
   card: {
-    width: 450,
+    width: 300,
     padding: 20,
   },
 };

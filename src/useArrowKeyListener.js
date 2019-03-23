@@ -1,11 +1,11 @@
 import React from "react";
-import { useCurrentState } from "./use-current-state";
+import useCurrentState from "./useCurrentState";
 const POSSIBLE_KEYS = {
   ARROW_LEFT: "ArrowLeft",
   ARROW_RIGHT: "ArrowRight",
 };
 
-export const useArrowKeyListener = ({ onLeftKeyPress, onRightKeyPress }) => {
+const useArrowKeyListener = ({ onLeftKeyPress, onRightKeyPress }) => {
   const [getFocusCount, setFocusCount] = useCurrentState(0);
 
   const handleKey = ({ key }) => {
@@ -30,3 +30,5 @@ export const useArrowKeyListener = ({ onLeftKeyPress, onRightKeyPress }) => {
     onFocus,
   };
 };
+
+export default useArrowKeyListener;

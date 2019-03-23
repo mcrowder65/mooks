@@ -1,8 +1,7 @@
 import React from "react";
-import { getElements } from "../get-elements";
-import { render, cleanup, fireEvent } from "react-testing-library";
+import getElements from "../getElements";
+import { render, fireEvent } from "react-testing-library";
 
-afterEach(cleanup);
 test("that it returns all the things in the form", () => {
   function Component() {
     const [name, setName] = React.useState();

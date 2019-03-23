@@ -1,4 +1,4 @@
-export const getElements = (e) => {
+const getElements = (e) => {
   return Object.values(e.target.elements).reduce((accum, { value, name }) => {
     if (name) {
       // eslint-disable-next-line no-param-reassign
@@ -7,3 +7,5 @@ export const getElements = (e) => {
     return accum;
   }, {});
 };
+
+export default getElements;

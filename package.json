@@ -10,7 +10,7 @@
     "build": "babel src --out-dir lib --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\"",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "preversion": "npm test && npm run build",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags && npm publish"
   },
   "files": [
     "lib/**/*"

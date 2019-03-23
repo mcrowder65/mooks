@@ -7,8 +7,8 @@ import { compose } from "./compose";
 import DefaultValue from "./DefaultValue";
 import LoaderButton from "./LoaderButton";
 import LoaderCard from "./LoaderCard";
-import Login from "./login";
-import Signup from "./signup";
+import Login from "./Login";
+import Signup from "./Signup";
 import hello from "./hello";
 
 export {

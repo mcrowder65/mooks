@@ -1,6 +1,6 @@
 import React from "react";
-import { render } from "../../../test/test-utils";
-import LoaderButton from "./loader-button";
+import { render } from "../../test/test-utils";
+import LoaderButton from "../loader-button";
 
 test("that it renders without issues", () => {
   render(<LoaderButton />);

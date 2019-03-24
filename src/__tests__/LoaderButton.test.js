@@ -6,8 +6,8 @@ test("that it renders without issues", () => {
   render(<LoaderButton />);
 });
 
-test("that it renders a CircularProgress when isFetching is true", () => {
-  const { getByTestId } = render(<LoaderButton isFetching={true} />);
+test("that it renders a CircularProgress when isLoading is true", () => {
+  const { getByTestId } = render(<LoaderButton isLoading={true} />);
 
   expect(getByTestId("circular-progress")).toBeInTheDocument();
 });

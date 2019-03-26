@@ -30,7 +30,6 @@ export const SnackbarProvider = (() => {
     };
 
     const handleClose = (event, reason) => {
-      console.log(reason);
       if (reason === "clickaway") {
         return;
       }

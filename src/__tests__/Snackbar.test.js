@@ -61,7 +61,6 @@ test("that it displays a snackbar when you do useSnackbar", async () => {
 
   expect(getByText(/second-message/i)).toBeInTheDocument();
   fireEvent.blur(getByTestId("click"));
-  debugger;
   expect(getByText(/second-message/i)).toBeInTheDocument();
   await sleep(400);
   expect(queryByText(/second-message/i)).toBeNull();

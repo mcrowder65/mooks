@@ -13,9 +13,10 @@ export const SnackbarProvider = (() => {
         setOpen(true);
       }
     };
-    const handleClick = (message) => {
+    const handleClick = (message, autoHideDuration = 3000) => {
       queue.push({
         message,
+        autoHideDuration,
         key: new Date().getTime(),
       });
 
@@ -29,6 +30,7 @@ export const SnackbarProvider = (() => {
     };
 
     const handleClose = (event, reason) => {
+      console.log(reason);
       if (reason === "clickaway") {
         return;
       }
@@ -47,7 +49,7 @@ export const SnackbarProvider = (() => {
             horizontal: "left",
           }}
           open={open}
-          autoHideDuration={3000}
+          autoHideDuration={messageInfo.autoHideDuration}
           onClose={handleClose}
           onExited={handleExited}
           ContentProps={{

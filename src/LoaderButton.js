@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Button from "@material-ui/core/Button";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import withStyles from "@material-ui/core/styles/withStyles";
+import { Button, CircularProgress } from "@material-ui/core";
+import { withStyles } from "@material-ui/core/styles";
 
 function LoaderButton(props) {
   const { children, isLoading, classes, circleSize, ...otherProps } = props;

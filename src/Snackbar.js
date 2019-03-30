@@ -30,6 +30,7 @@ export const SnackbarProvider = (() => {
     };
 
     const handleClose = (event, reason) => {
+      /* istanbul ignore next */
       if (reason === "clickaway") {
         return;
       }

@@ -6,13 +6,13 @@
   "scripts": {
     "linter": "eslint src --ext .js",
     "jest": "jest --coverage --silent",
-    "test": "npm run linter && npm run jest",
+    "test": "yarn linter && yarn jest",
     "build": "babel src --out-dir lib --ignore \"src/**/*.spec.js\",\"src/**/*.test.js\"",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
-    "preversion": "npm test && npm run build",
-    "postversion": "git push && git push --tags && npm publish",
+    "preversion": "yarn test && yarn build",
+    "postversion": "git push && git push --tags && yarn publish",
     "styleguide": "styleguidist server",
-    "styleguide:build": "npm install && styleguidist build && rm -rf docs && mv styleguide docs"
+    "styleguide:build": "yarn && styleguidist build && rm -rf docs && mv styleguide docs"
   },
   "files": [
     "lib/**/*"

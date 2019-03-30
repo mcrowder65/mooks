@@ -1,8 +1,8 @@
 language: node_js
 node_js: 10.15.0
-cache: npm
+cache: yarn
 script:
-  - npm run linter;
-  - npm run jest;
-  - npm run coveralls;
-  - npm run build
+  - yarn linter;
+  - yarn jest;
+  - yarn coveralls;
+  - yarn build

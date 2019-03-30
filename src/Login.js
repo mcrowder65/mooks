@@ -1,13 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import FormControl from "@material-ui/core/FormControl";
-import Input from "@material-ui/core/Input";
-import InputLabel from "@material-ui/core/InputLabel";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
-import Card from "@material-ui/core/Card";
-import Grid from "@material-ui/core/Grid";
-import withStyles from "@material-ui/core/styles/withStyles";
+import {
+  FormControl,
+  Input,
+  InputLabel,
+  Button,
+  Typography,
+  Card,
+  Grid,
+} from "@material-ui/core";
+import { withStyles } from "@material-ui/core/styles";
 
 import compose from "./compose";
 

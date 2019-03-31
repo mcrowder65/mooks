@@ -34,4 +34,4 @@ In order to get your tests to work, run `npm install -D jest-localstorage-mock`,
 ```
 
 #### How to publish to npm
-While on the master branch, run `npm version $versionType`
+While on the master branch, run `yarn version --(major|minor|patch)`

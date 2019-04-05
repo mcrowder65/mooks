@@ -1,4 +1,5 @@
 ## Mooks
+
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Total Status][total-image]][total-url]
@@ -18,10 +19,9 @@
 
 Reusable javascript utilities that serve [Matt Crowder!](https://twitter.com/mcrowder65)
 
-
 ### Usage in tests
 
-Under the use-local-storage-set-state module is obviously using localStorage. 
+Under the use-local-storage-set-state module is obviously using localStorage.
 When using this with jest, you will run into errors since jest does not have localStorage.
 Which is why this package requires `jest-localstorage-mock` as a peerDependency.
 
@@ -34,4 +34,5 @@ In order to get your tests to work, run `npm install -D jest-localstorage-mock`,
 ```
 
 #### How to publish to npm
+
 While on the master branch, run `yarn version --(major|minor|patch)`

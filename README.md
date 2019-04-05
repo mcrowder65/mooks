@@ -17,7 +17,17 @@
 [coverage-image]: https://coveralls.io/repos/github/mcrowder65/mooks/badge.svg
 [coverage-url]: https://coveralls.io/github/mcrowder65/mooks
 
-Reusable javascript utilities that serve [Matt Crowder!](https://twitter.com/mcrowder65)
+## Usage
+
+```bash
+yarn add -D mooks
+# or
+npm install -D mooks
+```
+
+## Documentation
+
+Component documentation is available at https://mooks.dev
 
 ### Usage in tests
 
@@ -25,7 +35,7 @@ Under the use-local-storage-set-state module is obviously using localStorage.
 When using this with jest, you will run into errors since jest does not have localStorage.
 Which is why this package requires `jest-localstorage-mock` as a peerDependency.
 
-In order to get your tests to work, run `npm install -D jest-localstorage-mock`, and then in your jest configuration, add:
+In order to get your tests to work, run `yarn add -D jest-localstorage-mock`, and then in your jest configuration, add:
 
 ```json
 "setupFiles": [

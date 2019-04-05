@@ -11,20 +11,15 @@ function useLocalStorageSetState(initialValue, name) {
   if (typeof initialValue === "function") {
     actualInitialValue = initialValue(actualInitialValue);
   }
-  const [value, setValue] = React.useState(actualInitialValue);
 
-  const theirSetValue = (theirNewValue) => {
-    let valueToSet;
-    if (typeof theirNewValue === "function") {
-      valueToSet = theirNewValue(value);
-      setValue(valueToSet);
-    } else {
-      setValue(theirNewValue);
-      valueToSet = theirNewValue;
-    }
-    store.set(name, valueToSet);
-  };
-  return [value, theirSetValue];
+  const [value, setValue] = React.useState(actualInitialValue);
+  React.useEffect(
+    () => {
+      store.set(name, value);
+    },
+    [value],
+  );
+  return [value, setValue];
 }
 
 export default useLocalStorageSetState;

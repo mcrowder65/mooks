@@ -1,41 +1,28 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { render, fireEvent } from "react-testing-library";
 
 import useLocalStorageSetState from "../useLocalStorageSetState";
 
-function MyComponent() {
-  const [name, setName] = useLocalStorageSetState("", "name");
-  const [flag, setFlag] = useLocalStorageSetState(false, "flag");
-  const [array, setArray] = useLocalStorageSetState([], "array");
-  return (
-    <div>
-      {name}
-      <input
-        data-testid="name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-
-      <button data-testid="button" onClick={() => setFlag((state) => !state)}>
-        {String(flag)}
-      </button>
-      {array.join(",")}
-      <button
-        data-testid="array-button"
-        onClick={() => setArray((state) => [...state, state.length + 1])}
-      />
-    </div>
-  );
-}
-
 test("that after inserting text into the document then remounting, the text will remain", () => {
-  const { queryByText, queryByTestId, unmount, rerender } = render(
+  function MyComponent() {
+    const [name, setName] = useLocalStorageSetState("", "name");
+    return (
+      <div>
+        {name}
+        <input
+          data-testid="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </div>
+    );
+  }
+  const { queryByText, getByTestId, unmount, rerender } = render(
     <MyComponent />,
   );
 
   const newValue = "Lebron James";
-  fireEvent.change(queryByTestId("name"), { target: { value: newValue } });
+  fireEvent.change(getByTestId("name"), { target: { value: newValue } });
 
   expect(queryByText(newValue)).toBeInTheDocument();
 
@@ -44,38 +31,6 @@ test("that after inserting text into the document then remounting, the text will
   rerender(<MyComponent />);
 
   expect(queryByText(newValue)).toBeInTheDocument();
-});
-
-test("that on component reloads, booleans persist", () => {
-  const { getByText, getByTestId, unmount, rerender } = render(<MyComponent />);
-
-  fireEvent.click(getByTestId("button"));
-
-  expect(getByText(/true/i)).toBeInTheDocument();
-
-  unmount();
-
-  rerender(<MyComponent />);
-
-  expect(getByText(/true/i)).toBeInTheDocument();
-});
-
-test("that on component reloads, arrays persist", () => {
-  const { getByText, getByTestId, unmount, rerender } = render(<MyComponent />);
-
-  fireEvent.click(getByTestId("array-button"));
-
-  expect(getByText(/1/i)).toBeInTheDocument();
-
-  fireEvent.click(getByTestId("array-button"));
-
-  expect(getByText(/1,2/i)).toBeInTheDocument();
-
-  unmount();
-
-  rerender(<MyComponent />);
-
-  expect(getByText(/1,2/i)).toBeInTheDocument();
 });
 
 test("that it throws when no name is provided", () => {
@@ -99,11 +54,6 @@ test("that when passing a function, it utilizes it to set the value", () => {
       </div>
     );
   }
-
-  MyComp.propTypes = {
-    arr: PropTypes.array.isRequired,
-  };
-
   const { getByTestId, getByText, rerender, unmount } = render(
     <MyComp arr={["first", "second"]} />,
   );

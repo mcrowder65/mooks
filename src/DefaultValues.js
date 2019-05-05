@@ -4,28 +4,15 @@ import { CircularProgress } from "@material-ui/core";
 
 const Context = React.createContext();
 
-export default function DefaultValues({ Loader, children }) {
-  const [loadCount, setLoadCount] = React.useState(0);
-
-  if (loadCount > 0) {
+function DefaultValues({ Loader, children, isLoading }) {
+  if (isLoading) {
     return <Loader />;
   }
-
-  const startedGettingValue = () => {
-    setLoadCount((count) => count + 1);
-  };
-
-  const gotValue = () => {
-    setLoadCount((count) => count - 1);
-  };
-  return (
-    <Context.Provider value={{ startedGettingValue, gotValue }}>
-      {children}
-    </Context.Provider>
-  );
+  return <Context.Provider value={{ isLoading }}>{children}</Context.Provider>;
 }
 
 DefaultValues.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
   Loader: PropTypes.node,
   children: PropTypes.node,
 };
@@ -34,11 +21,13 @@ DefaultValues.defaultProps = {
   Loader: () => (
     <CircularProgress color="primary" data-testid="circular-progress" />
   ),
+  isLoading: false,
 };
+
+export default DefaultValues;
 export function useDefaultValues() {
-  const { startedGettingValue, gotValue } = React.useContext(Context) || {};
+  const { isLoading } = React.useContext(Context) || {};
   return {
-    startedGettingValue,
-    gotValue,
+    isLoading,
   };
 }

@@ -10,3 +10,4 @@ export { default as LoaderCard } from "./LoaderCard";
 export { default as Login } from "./Login";
 export { default as Signup } from "./Signup";
 export { default as useLocalStorageSetState } from "./useLocalStorageSetState";
+export { default as DefaultValues } from "./DefaultValues";

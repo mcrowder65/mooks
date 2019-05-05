@@ -13,7 +13,7 @@ function DefaultValues({ Loader, children, isLoading }) {
 
 DefaultValues.propTypes = {
   isLoading: PropTypes.bool.isRequired,
-  Loader: PropTypes.node,
+  Loader: PropTypes.any,
   children: PropTypes.node,
 };
 

@@ -1,5 +1,6 @@
 export { default as useArrowKeyListener } from "./useArrowKeyListener";
-export { SnackbarProvider, useSnackbar } from "./Snackbar";
+export { default as SnackbarProvider } from "./SnackbarProvider";
+export { default as useSnackbar } from "./useSnackbar";
 export { default as useCurrentState } from "./useCurrentState";
 export { default as getElements } from "./getElements";
 export { default as useLoader } from "./useLoader";

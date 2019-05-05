@@ -1,8 +1,8 @@
 import React from "react";
-import { Snackbar } from "@material-ui/core";
+import { Snackbar as MuiSnackbar } from "@material-ui/core";
 
-const SnackbarContext = React.createContext();
-export const SnackbarProvider = (() => {
+export const SnackbarContext = React.createContext();
+const Snackbar = (() => {
   const queue = [];
   return (props) => {
     const [open, setOpen] = React.useState(false);
@@ -42,7 +42,7 @@ export const SnackbarProvider = (() => {
     };
     return (
       <SnackbarContext.Provider value={{ addMessage: handleClick }}>
-        <Snackbar
+        <MuiSnackbar
           key={messageInfo.key}
           anchorOrigin={{
             vertical: "bottom",
@@ -63,7 +63,4 @@ export const SnackbarProvider = (() => {
     );
   };
 })();
-
-export function useSnackbar() {
-  return React.useContext(SnackbarContext);
-}
+export default Snackbar;

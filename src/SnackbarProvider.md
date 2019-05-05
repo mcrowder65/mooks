@@ -1,5 +1,7 @@
 ```js
-import { SnackbarProvider, useSnackbar } from "./Snackbar";
+import SnackbarProvider from "./SnackbarProvider";
+import useSnackbar from "./useSnackbar";
+
 function DisplaySnackbar() {
   const { addMessage } = useSnackbar();
   return (

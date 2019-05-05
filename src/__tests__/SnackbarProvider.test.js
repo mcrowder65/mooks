@@ -1,6 +1,7 @@
 import React from "react";
 import { render, fireEvent, waitForDomChange } from "react-testing-library";
-import { SnackbarProvider, useSnackbar } from "../Snackbar";
+import SnackbarProvider from "../SnackbarProvider";
+import useSnackbar from "../useSnackbar";
 import sleep from "../sleep";
 test("that it displays for 3 seconds when nothing is added", async () => {
   function Comp() {

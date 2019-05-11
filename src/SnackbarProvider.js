@@ -6,7 +6,10 @@ const Snackbar = (() => {
   const queue = [];
   return (props) => {
     const [open, setOpen] = React.useState(false);
-    const [messageInfo, setMessageInfo] = React.useState({});
+    const [messageInfo, setMessageInfo] = React.useState({
+      vertical: "bottom",
+      horizontal: "center",
+    });
     const processQueue = () => {
       if (queue.length > 0) {
         setMessageInfo(queue.shift());
@@ -18,7 +21,7 @@ const Snackbar = (() => {
       {
         autoHideDuration = 3000,
         vertical = "bottom",
-        horizontal = "left",
+        horizontal = "center",
       } = {},
     ) => {
       queue.push({

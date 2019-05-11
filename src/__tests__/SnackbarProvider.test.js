@@ -36,13 +36,13 @@ test("that it displays a snackbar when you do useSnackbar", async () => {
       <div data-testid="click">
         <button
           data-testid="first-message"
-          onClick={() => addMessage("first-message", 50)}
+          onClick={() => addMessage("first-message", { autoHideDuration: 50 })}
         >
           click me
         </button>
         <button
           data-testid="second-message"
-          onClick={() => addMessage("second-message", 50)}
+          onClick={() => addMessage("second-message", { autoHideDuration: 50 })}
         >
           click me
         </button>

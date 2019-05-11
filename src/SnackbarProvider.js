@@ -13,10 +13,19 @@ const Snackbar = (() => {
         setOpen(true);
       }
     };
-    const handleClick = (message, autoHideDuration = 3000) => {
+    const handleClick = (
+      message,
+      {
+        autoHideDuration = 3000,
+        vertical = "bottom",
+        horizontal = "left",
+      } = {},
+    ) => {
       queue.push({
         message,
         autoHideDuration,
+        vertical,
+        horizontal,
         key: new Date().getTime(),
       });
 
@@ -45,8 +54,8 @@ const Snackbar = (() => {
         <MuiSnackbar
           key={messageInfo.key}
           anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "left",
+            vertical: messageInfo.vertical,
+            horizontal: messageInfo.horizontal,
           }}
           open={open}
           autoHideDuration={messageInfo.autoHideDuration}

@@ -3133,10 +3133,10 @@ escodegen@^1.11.0, escodegen@^1.11.1, escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-mcrowder65@0.0.46:
-  version "0.0.46"
-  resolved "https://registry.yarnpkg.com/eslint-config-mcrowder65/-/eslint-config-mcrowder65-0.0.46.tgz#085d6ef624575065a2be4cb123b2480fddc49b93"
-  integrity sha512-JlRARTXeZXQpbGtKsf5AcUYa4hW928kHfW7aLZhl/GogH5AboOV3mcO7+FO9h6GIPizQ3KZTj0B/o9naI8swPg==
+eslint-config-mcrowder65@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/eslint-config-mcrowder65/-/eslint-config-mcrowder65-1.0.3.tgz#de5803698f887470d07dc0c3c408e3e8f68cc37c"
+  integrity sha512-pjwiT400x5FfOUtWx7EHGCDTt0grvrsMloUmRDRc7HG+BuzoCfjIHtqrXBYN5ypj/Rz9LRd6u7g2akKjLbAPrQ==
   dependencies:
     babel-eslint "8.2.6"
     eslint "4.19.1"

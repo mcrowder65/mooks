@@ -7,7 +7,11 @@ const useObjectState = (initialState = {}) => {
   const [state, ...args] = React.useState(initialState);
   const setState = (newState) => {
     const [set] = args;
-    set((prevState) => ({ ...prevState, ...newState }));
+    if (typeof newState === "function") {
+      set(newState);
+    } else {
+      set((prevState) => ({ ...prevState, ...newState }));
+    }
   };
   return [state, setState];
 };

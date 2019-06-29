@@ -12,7 +12,19 @@ function MyComponent({ initialState }) {
       >
         set
       </button>
-      {state.message}
+      <div>{state.message}</div>
+      {state.initialMessage && <div>{state.initialMessage}</div>}
+      <button
+        data-testid="button-function"
+        onClick={() =>
+          setState((prevState) => ({
+            ...prevState,
+            message: "this was set with a function",
+          }))
+        }
+      >
+        button-function
+      </button>
     </div>
   );
 }
@@ -52,9 +64,21 @@ function MyComponent({ initialState }) {
   });
 });
 
-test("when clicking on the button, it will display state.message even though i didn't forward the other state", () => {
-  const { getByText, queryByText, getByTestId } = render(<MyComponent />);
-  expect(queryByText("hello")).toBeNull();
-  fireEvent.click(getByTestId("button"));
-  expect(getByText("hello")).toBeInTheDocument();
-});
+[{ buttonTestId: "button" }, { buttonTestId: "button-function" }].forEach(
+  ({ buttonTestId }) => {
+    describe(`WHEN clicking on ${buttonTestId}`, () => {
+      it(`THEN it will display state.message even though i didn't forward the other state, and initialState.initialMessage stays`, () => {
+        const initialState = { initialMessage: "asdf" };
+        const { getByText, queryByText, getByTestId } = render(
+          <MyComponent initialState={initialState} />,
+        );
+        expect(queryByText("hello")).toBeNull();
+        expect(getByText(initialState.initialMessage)).toBeInTheDocument();
+
+        fireEvent.click(getByTestId(buttonTestId));
+        expect(getByText("asdf")).toBeInTheDocument();
+        expect(getByText(initialState.initialMessage)).toBeInTheDocument();
+      });
+    });
+  },
+);

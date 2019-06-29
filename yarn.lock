@@ -3133,10 +3133,10 @@ escodegen@^1.11.0, escodegen@^1.11.1, escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-mcrowder65@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/eslint-config-mcrowder65/-/eslint-config-mcrowder65-1.0.3.tgz#de5803698f887470d07dc0c3c408e3e8f68cc37c"
-  integrity sha512-pjwiT400x5FfOUtWx7EHGCDTt0grvrsMloUmRDRc7HG+BuzoCfjIHtqrXBYN5ypj/Rz9LRd6u7g2akKjLbAPrQ==
+eslint-config-mcrowder65@1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/eslint-config-mcrowder65/-/eslint-config-mcrowder65-1.0.8.tgz#db19e6e997559df58243e05abfa5678acf8ff0b6"
+  integrity sha512-Uy90jq6yJJ7f0IULmYY4oxczESpyn1Js70Nxg6ej8hukCK9J3TrANxRJb56vC8Cdv+KKKPfUAMehxKDzs+VKRw==
   dependencies:
     babel-eslint "8.2.6"
     eslint "4.19.1"
@@ -3148,6 +3148,7 @@ eslint-config-mcrowder65@1.0.3:
     eslint-plugin-import "2.12.0"
     eslint-plugin-jest "22.0.0"
     eslint-plugin-react "7.11.1"
+    eslint-plugin-react-native "^3.7.0"
     prettier "1.14.2"
 
 eslint-config-walmart@2.2.1:
@@ -3231,6 +3232,18 @@ eslint-plugin-jest@22.0.0:
   version "22.0.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.0.0.tgz#87dc52bbdd47f37f23bf2b10bb8469458bb3ed68"
   integrity sha512-YOj8cYI5ZXEZUrX2kUBLachR1ffjQiicIMBoivN7bXXHnxi8RcwNvmVzwlu3nTmjlvk5AP3kIpC5i8HcinmhPA==
+
+eslint-plugin-react-native-globals@^0.1.1:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-native-globals/-/eslint-plugin-react-native-globals-0.1.2.tgz#ee1348bc2ceb912303ce6bdbd22e2f045ea86ea2"
+  integrity sha512-9aEPf1JEpiTjcFAmmyw8eiIXmcNZOqaZyHO77wgm0/dWfT/oxC1SrIq8ET38pMxHYrcB6Uew+TzUVsBeczF88g==
+
+eslint-plugin-react-native@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-native/-/eslint-plugin-react-native-3.7.0.tgz#7e2cc1f3cf24919c4c0ea7fac13301e7444e105f"
+  integrity sha512-krLtQmGih/uJDPxF8DBpnU8J3kRUsDm/Dey5yEhOO8LN1I3Wesbk4PGCg8Zah57azKFU+9YtGooFjJcDJWUs+g==
+  dependencies:
+    eslint-plugin-react-native-globals "^0.1.1"
 
 eslint-plugin-react@7.11.1:
   version "7.11.1"

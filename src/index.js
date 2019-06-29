@@ -14,3 +14,4 @@ export { default as Signup } from "./Signup";
 export { default as useLocalStorageSetState } from "./useLocalStorageSetState";
 export { default as DefaultValues } from "./DefaultValues";
 export { default as useNetworkStatus } from "./useNetworkStatus";
+export { default as useObjectState } from "./useObjectState";

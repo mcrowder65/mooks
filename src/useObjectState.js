@@ -8,7 +8,10 @@ const useObjectState = (initialState = {}) => {
   const setState = (newState) => {
     const [set] = args;
     if (typeof newState === "function") {
-      set(newState);
+      set((prevState) => {
+        const evenNewerState = newState(prevState);
+        set({ ...state, ...evenNewerState });
+      });
     } else {
       set((prevState) => ({ ...prevState, ...newState }));
     }

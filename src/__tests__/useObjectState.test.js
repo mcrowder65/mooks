@@ -12,6 +12,9 @@ function MyComponent({ initialState }) {
       >
         set
       </button>
+      <button data-testid="empty-object" onClick={() => setState({})}>
+        set empty object
+      </button>
       <div>{state.message}</div>
       {state.initialMessage && <div>{state.initialMessage}</div>}
       <button
@@ -82,3 +85,11 @@ function MyComponent({ initialState }) {
     });
   },
 );
+it(`WHEN setting to empty object, it works`, () => {
+  const { queryByText, getByTestId } = render(
+    <MyComponent initialState={{ message: "hello" }} />,
+  );
+  expect(queryByText("hello")).toBeInTheDocument();
+  fireEvent.click(getByTestId("empty-object"));
+  expect(queryByText("hello")).toBeNull();
+});

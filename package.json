@@ -77,6 +77,7 @@
   },
   "babelConfig": ".babelrc.js",
   "dependencies": {
+    "react-fast-compare": "^2.0.4",
     "store": "2.0.12"
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import isEqual from "react-fast-compare";
 
 const useObjectState = (initialState = {}) => {
   if (typeof initialState !== "object" || Array.isArray(initialState)) {
@@ -12,6 +13,8 @@ const useObjectState = (initialState = {}) => {
         const evenNewerState = newState(prevState);
         set({ ...state, ...evenNewerState });
       });
+    } else if (isEqual(newState, {})) {
+      set(newState);
     } else {
       set((prevState) => ({ ...prevState, ...newState }));
     }

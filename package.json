@@ -1,6 +1,6 @@
 {
   "name": "@mcrowder65/mooks",
-  "version": "1.7.4",
+  "version": "1.7.5",
   "description": "",
   "main": "lib/index.js",
   "repository": "https://github.com/mcrowder65/mooks",
@@ -23,6 +23,10 @@
   "license": "ISC",
   "eslintConfig": {
     "extends": "mcrowder65"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "jest": {
     "collectCoverageFrom": [

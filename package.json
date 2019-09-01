@@ -1,6 +1,6 @@
 {
-  "name": "mooks",
-  "version": "1.7.3",
+  "name": "@mcrowder65/mooks",
+  "version": "1.7.4",
   "description": "",
   "main": "lib/index.js",
   "repository": "https://github.com/mcrowder65/mooks",

@@ -6,12 +6,12 @@
 [![PRs Welcome][pr-image]][pr-url]
 [![Coverage Status][coverage-image]][coverage-url]
 
-[npm-image]: https://badge.fury.io/js/mooks.svg
-[npm-url]: https://npmjs.org/package/mooks
+[npm-image]: https://badge.fury.io/js/@mcrowder65%2fmooks.svg
+[npm-url]: https://npmjs.org/package/@mcrowder65/mooks
 [travis-image]: https://travis-ci.org/mcrowder65/mooks.svg?branch=master
 [travis-url]: https://travis-ci.org/mcrowder65/mooks
-[total-image]: https://img.shields.io/npm/dt/mooks.svg
-[total-url]: https://img.shields.io/npm/dt/mooks
+[total-image]: https://img.shields.io/npm/dt/@mcrowder65%2fmooks.svg
+[total-url]: https://img.shields.io/npm/dt/@mcrowder65%2fmooks
 [pr-image]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
 [pr-url]: http://makeapullrequest.com
 [coverage-image]: https://coveralls.io/repos/github/mcrowder65/mooks/badge.svg

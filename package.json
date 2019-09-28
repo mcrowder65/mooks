@@ -40,7 +40,8 @@
       "<rootDir>/test/config.js"
     ],
     "transform": {
-      "^.+\\.js?$": "babel-jest"
+      "^.+\\.js?$": "babel-jest",
+      "^.+\\.md?$": "jest-raw-loader"
     },
     "coverageThreshold": {
       "global": {
@@ -49,7 +50,8 @@
         "lines": 100,
         "statements": 100
       }
-    }
+    },
+    "moduleFileExtensions": ["json", "js"]
   },
   "peerDependencies": {
     "@material-ui/core": "3.9.2",
@@ -73,10 +75,14 @@
     "jest": "24.4.0",
     "jest-dom": "3.0.1",
     "jest-localstorage-mock": "2.4.0",
+    "jest-raw-loader": "^1.0.1",
     "react": "16.8.4",
     "react-dom": "16.8.4",
     "react-styleguidist": "9.0.4",
     "react-testing-library": "6.0.0",
+    "sosia": "^1.2.5",
+    "sosia-markdown": "^1.1.1",
+    "sosia-puppeteer": "^1.1.0",
     "webpack": "4.29.6"
   },
   "babelConfig": ".babelrc.js",

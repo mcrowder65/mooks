@@ -54,8 +54,8 @@
   "peerDependencies": {
     "@material-ui/core": "3.9.2",
     "jest-localstorage-mock": "2.4.0",
-    "react": "16.8.4",
-    "react-dom": "16.8.4"
+    "react": "16.10.1",
+    "react-dom": "16.10.1"
   },
   "devDependencies": {
     "@babel/cli": "7.2.3",
@@ -73,8 +73,8 @@
     "jest": "24.4.0",
     "jest-dom": "3.0.1",
     "jest-localstorage-mock": "2.4.0",
-    "react": "16.8.4",
-    "react-dom": "16.8.4",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
     "react-styleguidist": "9.0.4",
     "react-testing-library": "6.0.0",
     "webpack": "4.29.6"

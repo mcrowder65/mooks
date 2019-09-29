@@ -26,7 +26,7 @@ function Comp() {
   );
 }
 
-test("that it renders online", () => {
+test("that it renders the dimensions", () => {
   const { getByText } = render(<Comp />);
 
   expect(getByText(/innerHeight:*768/)).toBeInTheDocument();

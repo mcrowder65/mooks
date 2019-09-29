@@ -1,12 +1,16 @@
 import React from "react";
 
 function getSize() {
-  return {
-    innerHeight: window.innerHeight,
-    innerWidth: window.innerWidth,
-    outerHeight: window.outerHeight,
-    outerWidth: window.outerWidth,
-  };
+  /* istanbul ignore next */
+  return global.window
+    ? {
+        innerHeight: window.innerHeight,
+        innerWidth: window.innerWidth,
+        outerHeight: window.outerHeight,
+        outerWidth: window.outerWidth,
+      }
+    : /* istanbul ignore next */
+      { innerHeight: 0, innerWidth: 0, outerHeight: 0, outerWidth: 0 };
 }
 
 function useWindowSize() {

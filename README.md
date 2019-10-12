@@ -20,9 +20,9 @@
 ## Usage
 
 ```bash
-yarn add -D mooks
+yarn add @mcrowder65/mooks
 # or
-npm install -D mooks
+npm install @mcrowder65/mooks
 ```
 
 ## Documentation

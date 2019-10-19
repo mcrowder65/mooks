@@ -1,6 +1,6 @@
 import React from "react";
 import useArrowKeyListener from "../useArrowKeyListener";
-import { render, fireEvent } from "react-testing-library";
+import { render, fireEvent } from "@testing-library/react";
 
 test("that when pressing right, it will trigger onRightKeyPress", () => {
   function Comp() {

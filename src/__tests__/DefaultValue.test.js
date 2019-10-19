@@ -1,6 +1,6 @@
 import React from "react";
 import DefaultValue from "../DefaultValue";
-import { render, fireEvent } from "react-testing-library";
+import { render, fireEvent } from "@testing-library/react";
 test("when value is undefined, null is returned", () => {
   const { queryByTestId } = render(
     <DefaultValue value={undefined}>

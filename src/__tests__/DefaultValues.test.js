@@ -1,6 +1,6 @@
 import React from "react";
 import DefaultValues from "../DefaultValues";
-import { render, fireEvent } from "react-testing-library";
+import { render, fireEvent } from "@testing-library/react";
 import DefaultValue from "../DefaultValue";
 
 test("that it renders without errors", () => {

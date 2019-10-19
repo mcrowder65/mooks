@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent, waitForDomChange } from "react-testing-library";
+import { render, fireEvent, waitForDomChange } from "@testing-library/react";
 import SnackbarProvider from "../SnackbarProvider";
 import useSnackbar from "../useSnackbar";
 import sleep from "../sleep";

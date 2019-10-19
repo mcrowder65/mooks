@@ -1,6 +1,6 @@
 import React from "react";
-import { render, fireEvent } from "react-testing-library";
-
+import { fireEvent } from "@testing-library/react";
+import { render } from "../../test/test-utils";
 import useLocalStorageSetState from "../useLocalStorageSetState";
 
 test("that after inserting text into the document then remounting, the text will remain", () => {
@@ -68,4 +68,28 @@ test("that when passing a function, it utilizes it to set the value", () => {
   rerender(<MyComp arr={["first"]} />);
 
   expect(getByText(/first/i)).toBeInTheDocument();
+});
+
+test("it takes the new initialValue when the next initialValue is different", () => {
+  function MyComp(props) {
+    const [state] = useLocalStorageSetState(
+      props.initialValue,
+      "new-keys-check",
+      true,
+    );
+    return <div>{JSON.stringify(state)}</div>;
+  }
+
+  let initialValue = { hello: "world" };
+  const { getByText, rerender, unmount } = render(
+    <MyComp initialValue={initialValue} />,
+  );
+
+  expect(getByText(JSON.stringify(initialValue))).toBeInTheDocument();
+
+  initialValue = { goodbye: "world" };
+  unmount();
+  rerender(<MyComp initialValue={initialValue} />);
+
+  expect(getByText(JSON.stringify(initialValue))).toBeInTheDocument();
 });

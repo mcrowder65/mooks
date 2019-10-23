@@ -4,10 +4,10 @@ import { Card, LinearProgress } from "@material-ui/core"
 
 function LoaderCard({ children, isLoading, ...props }) {
   return (
-    <React.Fragment>
+    <Card {...props}>
       {isLoading ? <LinearProgress data-testid="linear-progress" /> : null}
-      <Card {...props}>{children}</Card>
-    </React.Fragment>
+      {children}
+    </Card>
   )
 }
 LoaderCard.propTypes = {

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 function getSize() {
   /* istanbul ignore next */
@@ -10,24 +10,24 @@ function getSize() {
         outerWidth: window.outerWidth,
       }
     : /* istanbul ignore next */
-      { innerHeight: 0, innerWidth: 0, outerHeight: 0, outerWidth: 0 };
+      { innerHeight: 0, innerWidth: 0, outerHeight: 0, outerWidth: 0 }
 }
 
 function useWindowSize() {
-  const [windowSize, setWindowSize] = React.useState(getSize());
+  const [windowSize, setWindowSize] = React.useState(getSize())
 
   function handleResize() {
-    setWindowSize(getSize());
+    setWindowSize(getSize())
   }
 
   React.useEffect(() => {
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize)
     return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
 
-  return windowSize;
+  return windowSize
 }
 
-export default useWindowSize;
+export default useWindowSize

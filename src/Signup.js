@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from "react"
+import PropTypes from "prop-types"
 import {
   FormControl,
   Input,
@@ -8,8 +8,8 @@ import {
   Grid,
   Typography,
   Card,
-} from "@material-ui/core";
-import { withStyles } from "@material-ui/core/styles";
+} from "@material-ui/core"
+import { withStyles } from "@material-ui/core/styles"
 
 const styles = {
   content: {
@@ -21,7 +21,7 @@ const styles = {
     width: 300,
     padding: 20,
   },
-};
+}
 function Signup({ classes, _onSubmit }) {
   return (
     <Card className={classes.card}>
@@ -60,11 +60,11 @@ function Signup({ classes, _onSubmit }) {
         </form>
       </Grid>
     </Card>
-  );
+  )
 }
 Signup.propTypes = {
   classes: PropTypes.object,
   _onSubmit: PropTypes.func,
-};
+}
 
-export default withStyles(styles)(Signup);
+export default withStyles(styles)(Signup)

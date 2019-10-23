@@ -2,10 +2,10 @@ const getElements = (e) => {
   return Object.values(e.target.elements).reduce((accum, { value, name }) => {
     if (name) {
       // eslint-disable-next-line no-param-reassign
-      accum[name] = value;
+      accum[name] = value
     }
-    return accum;
-  }, {});
-};
+    return accum
+  }, {})
+}
 
-export default getElements;
+export default getElements

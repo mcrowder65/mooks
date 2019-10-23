@@ -3226,10 +3226,10 @@ escodegen@^1.11.0, escodegen@^1.11.1, escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-mcrowder65@1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/eslint-config-mcrowder65/-/eslint-config-mcrowder65-1.0.8.tgz#db19e6e997559df58243e05abfa5678acf8ff0b6"
-  integrity sha512-Uy90jq6yJJ7f0IULmYY4oxczESpyn1Js70Nxg6ej8hukCK9J3TrANxRJb56vC8Cdv+KKKPfUAMehxKDzs+VKRw==
+eslint-config-mcrowder65@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-config-mcrowder65/-/eslint-config-mcrowder65-2.0.2.tgz#b85fccb2c1b0be7ae53baf75d52e6c7857374925"
+  integrity sha512-0SWXbQJ+z3mllrgscghRh65m1eyxhSXb9SzvXIZOvg46fCE7H6SF0CrSXaMVsxBBSZhRNo4YAguPsOm7bLGIKQ==
   dependencies:
     babel-eslint "8.2.6"
     eslint "4.19.1"
@@ -3242,7 +3242,7 @@ eslint-config-mcrowder65@1.0.8:
     eslint-plugin-jest "22.0.0"
     eslint-plugin-react "7.11.1"
     eslint-plugin-react-native "^3.7.0"
-    prettier "1.14.2"
+    prettier "^1.18.2"
 
 eslint-config-walmart@2.2.1:
   version "2.2.1"
@@ -6788,10 +6788,10 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
-prettier@1.14.2:
-  version "1.14.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.2.tgz#0ac1c6e1a90baa22a62925f41963c841983282f9"
-  integrity sha512-McHPg0n1pIke+A/4VcaS2en+pTNjy4xF+Uuq86u/5dyDO59/TtFZtQ708QIRkEZ3qwKz3GVkVa6mpxK/CpB8Rg==
+prettier@^1.18.2:
+  version "1.18.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.18.2.tgz#6823e7c5900017b4bd3acf46fe9ac4b4d7bda9ea"
+  integrity sha512-OeHeMc0JhFE9idD4ZdtNibzY0+TPHSpSSb9h8FqtP+YnoZZ1sl8Vc9b1sasjfymH3SonAF4QcA2+mzHPhMvIiw==
 
 pretty-format@^24.0.0, pretty-format@^24.5.0:
   version "24.5.0"

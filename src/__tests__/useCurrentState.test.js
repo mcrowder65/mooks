@@ -1,23 +1,23 @@
-import React from "react";
-import { render, fireEvent } from "@testing-library/react";
-import useCurrentState from "../useCurrentState";
+import React from "react"
+import { render, fireEvent } from "@testing-library/react"
+import useCurrentState from "../useCurrentState"
 
 const tester = (Comp) => {
-  const { getByTestId, getByText } = render(<Comp />);
+  const { getByTestId, getByText } = render(<Comp />)
 
-  expect(getByText(/0/i)).toBeInTheDocument();
+  expect(getByText(/0/i)).toBeInTheDocument()
 
-  fireEvent.click(getByTestId("minus"));
+  fireEvent.click(getByTestId("minus"))
 
-  expect(getByText(/-1/i)).toBeInTheDocument();
+  expect(getByText(/-1/i)).toBeInTheDocument()
 
-  fireEvent.click(getByTestId("plus"));
+  fireEvent.click(getByTestId("plus"))
 
-  expect(getByText(/0/i)).toBeInTheDocument();
-};
+  expect(getByText(/0/i)).toBeInTheDocument()
+}
 test("that it works", () => {
   function Comp() {
-    const [getCount, setCount] = useCurrentState(0);
+    const [getCount, setCount] = useCurrentState(0)
 
     return (
       <div>
@@ -35,16 +35,16 @@ test("that it works", () => {
           Plus
         </button>
       </div>
-    );
+    )
   }
-  tester(Comp);
-});
+  tester(Comp)
+})
 
 test("when when initialValue is a function, it invokes it", () => {
   function Comp() {
     const [getCount, setCount] = useCurrentState(() => {
-      return 0;
-    });
+      return 0
+    })
 
     return (
       <div>
@@ -62,14 +62,14 @@ test("when when initialValue is a function, it invokes it", () => {
           Plus
         </button>
       </div>
-    );
+    )
   }
-  tester(Comp);
-});
+  tester(Comp)
+})
 
 test("when not passing a function as the setter, it works", () => {
   function Comp() {
-    const [getCount, setCount] = useCurrentState(0);
+    const [getCount, setCount] = useCurrentState(0)
 
     return (
       <div>
@@ -81,7 +81,7 @@ test("when not passing a function as the setter, it works", () => {
           Plus
         </button>
       </div>
-    );
+    )
   }
-  tester(Comp);
-});
+  tester(Comp)
+})

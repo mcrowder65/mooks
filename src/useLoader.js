@@ -1,19 +1,19 @@
-import React from "react";
+import React from "react"
 
 function useLoader(apiCall) {
-  const [isLoading, setLoading] = React.useState(false);
+  const [isLoading, setLoading] = React.useState(false)
   const newApiCall = async (...args) => {
     try {
-      setLoading(true);
-      await apiCall(...args);
+      setLoading(true)
+      await apiCall(...args)
     } catch (e) {
-      throw e;
+      throw e
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
-  return { isLoading, apiCall: newApiCall };
+  return { isLoading, apiCall: newApiCall }
 }
 
-export default useLoader;
+export default useLoader

@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from "react"
+import PropTypes from "prop-types"
 import {
   FormControl,
   Input,
@@ -8,10 +8,10 @@ import {
   Typography,
   Card,
   Grid,
-} from "@material-ui/core";
-import { withStyles } from "@material-ui/core/styles";
+} from "@material-ui/core"
+import { withStyles } from "@material-ui/core/styles"
 
-import compose from "./compose";
+import compose from "./compose"
 
 const styles = {
   content: {
@@ -23,7 +23,7 @@ const styles = {
     width: 300,
     padding: 20,
   },
-};
+}
 
 function Login({ classes, _onSubmit }) {
   return (
@@ -62,12 +62,12 @@ function Login({ classes, _onSubmit }) {
         </Grid>
       </form>
     </Card>
-  );
+  )
 }
 Login.propTypes = {
   classes: PropTypes.object.isRequired,
   _onSubmit: PropTypes.func.isRequired,
-};
-const enhance = compose(withStyles(styles));
+}
+const enhance = compose(withStyles(styles))
 
-export default enhance(Login);
+export default enhance(Login)

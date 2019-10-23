@@ -1,34 +1,34 @@
-import React from "react";
-import useCurrentState from "./useCurrentState";
+import React from "react"
+import useCurrentState from "./useCurrentState"
 const POSSIBLE_KEYS = {
   ARROW_LEFT: "ArrowLeft",
   ARROW_RIGHT: "ArrowRight",
-};
+}
 
 const useArrowKeyListener = ({ onLeftKeyPress, onRightKeyPress }) => {
-  const [getFocusCount, setFocusCount] = useCurrentState(0);
+  const [getFocusCount, setFocusCount] = useCurrentState(0)
 
   const handleKey = ({ key }) => {
     if (getFocusCount() === 0) {
       if (key === POSSIBLE_KEYS.ARROW_LEFT) {
-        onLeftKeyPress();
+        onLeftKeyPress()
       } else if (key === POSSIBLE_KEYS.ARROW_RIGHT) {
-        onRightKeyPress();
+        onRightKeyPress()
       }
     }
-  };
+  }
   React.useEffect(() => {
-    window.addEventListener("keydown", handleKey);
+    window.addEventListener("keydown", handleKey)
     return () => {
-      window.removeEventListener("keydown", handleKey);
-    };
-  }, []);
-  const onBlur = () => setFocusCount((state) => state - 1);
-  const onFocus = () => setFocusCount((state) => state + 1);
+      window.removeEventListener("keydown", handleKey)
+    }
+  }, [])
+  const onBlur = () => setFocusCount((state) => state - 1)
+  const onFocus = () => setFocusCount((state) => state + 1)
   return {
     onBlur,
     onFocus,
-  };
-};
+  }
+}
 
-export default useArrowKeyListener;
+export default useArrowKeyListener

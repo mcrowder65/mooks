@@ -1,15 +1,15 @@
-import React from "react";
-import sleep from "../sleep";
-import useLoader from "../useLoader";
-import { render, fireEvent, waitForDomChange } from "@testing-library/react";
+import React from "react"
+import sleep from "../sleep"
+import useLoader from "../useLoader"
+import { render, fireEvent, waitForDomChange } from "@testing-library/react"
 
 test("that when passing an apiCall, it exposes isLoading, and the enhanced apiCall ", async () => {
   async function call() {
-    await sleep(1000);
+    await sleep(1000)
   }
 
   function Comp() {
-    const { isLoading, apiCall } = useLoader(call);
+    const { isLoading, apiCall } = useLoader(call)
 
     return (
       <div>
@@ -18,34 +18,34 @@ test("that when passing an apiCall, it exposes isLoading, and the enhanced apiCa
           Click me!!
         </button>
       </div>
-    );
+    )
   }
 
-  const { getByTestId, getByText, container } = render(<Comp />);
-  expect(getByText(/false/i)).toBeInTheDocument();
+  const { getByTestId, getByText, container } = render(<Comp />)
+  expect(getByText(/false/i)).toBeInTheDocument()
 
-  fireEvent.click(getByTestId("api-call"));
+  fireEvent.click(getByTestId("api-call"))
 
-  expect(getByText(/true/i)).toBeInTheDocument();
-  await waitForDomChange(container);
-  expect(getByText(/false/i)).toBeInTheDocument();
-});
+  expect(getByText(/true/i)).toBeInTheDocument()
+  await waitForDomChange(container)
+  expect(getByText(/false/i)).toBeInTheDocument()
+})
 
 test("that it throws when the wrapped api call throws", async () => {
   function call() {
-    throw new Error("I am error");
+    throw new Error("I am error")
   }
   function Comp() {
-    const [errorMessage, setErrorMessage] = React.useState("not error");
-    const { apiCall } = useLoader(call);
+    const [errorMessage, setErrorMessage] = React.useState("not error")
+    const { apiCall } = useLoader(call)
     // wrap around the apiCall, display that an error occurred with the catch.
     const wrapper = async () => {
       try {
-        await apiCall();
+        await apiCall()
       } catch (e) {
-        setErrorMessage("am error");
+        setErrorMessage("am error")
       }
-    };
+    }
     return (
       <div>
         <button data-testid="api-call" onClick={wrapper}>
@@ -54,12 +54,12 @@ test("that it throws when the wrapped api call throws", async () => {
 
         {errorMessage}
       </div>
-    );
+    )
   }
 
-  const { getByText, getByTestId, container } = render(<Comp />);
-  expect(getByText(/not error/i)).toBeInTheDocument();
-  fireEvent.click(getByTestId("api-call"));
-  await waitForDomChange(container);
-  expect(getByText(/am error/i)).toBeInTheDocument();
-});
+  const { getByText, getByTestId, container } = render(<Comp />)
+  expect(getByText(/not error/i)).toBeInTheDocument()
+  fireEvent.click(getByTestId("api-call"))
+  await waitForDomChange(container)
+  expect(getByText(/am error/i)).toBeInTheDocument()
+})

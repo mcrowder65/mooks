@@ -1,7 +1,7 @@
 const sleep = (time) => {
   return new Promise((resolve) => {
-    setTimeout(resolve, time);
-  });
-};
+    setTimeout(resolve, time)
+  })
+}
 
-export default sleep;
+export default sleep

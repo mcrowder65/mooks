@@ -1,21 +1,21 @@
-import React from "react";
-import { Snackbar as MuiSnackbar } from "@material-ui/core";
+import React from "react"
+import { Snackbar as MuiSnackbar } from "@material-ui/core"
 
-export const SnackbarContext = React.createContext();
+export const SnackbarContext = React.createContext()
 const Snackbar = (() => {
-  const queue = [];
+  const queue = []
   return (props) => {
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(false)
     const [messageInfo, setMessageInfo] = React.useState({
       vertical: "bottom",
       horizontal: "center",
-    });
+    })
     const processQueue = () => {
       if (queue.length > 0) {
-        setMessageInfo(queue.shift());
-        setOpen(true);
+        setMessageInfo(queue.shift())
+        setOpen(true)
       }
-    };
+    }
     const handleClick = (
       message,
       {
@@ -30,28 +30,28 @@ const Snackbar = (() => {
         vertical,
         horizontal,
         key: new Date().getTime(),
-      });
+      })
 
       if (open) {
         // immediately begin dismissing current message
         // to start showing new one
-        setOpen(false);
+        setOpen(false)
       } else {
-        processQueue();
+        processQueue()
       }
-    };
+    }
 
     const handleClose = (event, reason) => {
       /* istanbul ignore next */
       if (reason === "clickaway") {
-        return;
+        return
       }
-      setOpen(false);
-    };
+      setOpen(false)
+    }
 
     const handleExited = () => {
-      processQueue();
-    };
+      processQueue()
+    }
     return (
       <SnackbarContext.Provider value={{ addMessage: handleClick }}>
         <MuiSnackbar
@@ -72,7 +72,7 @@ const Snackbar = (() => {
 
         {props.children}
       </SnackbarContext.Provider>
-    );
-  };
-})();
-export default Snackbar;
+    )
+  }
+})()
+export default Snackbar

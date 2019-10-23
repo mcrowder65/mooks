@@ -1,5 +1,5 @@
-import sleep from "../sleep";
+import sleep from "../sleep"
 
 test("sleep just does a setTimeout", async () => {
-  await sleep(10);
-});
+  await sleep(10)
+})

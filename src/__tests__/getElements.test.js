@@ -1,17 +1,18 @@
-import React from "react";
-import getElements from "../getElements";
-import { render, fireEvent } from "@testing-library/react";
+import React from "react"
+import getElements from "../getElements"
+
+import { render, fireEvent } from "@testing-library/react"
 
 test("that it returns all the things in the form", () => {
   function Component() {
-    const [name, setName] = React.useState();
-    const [address, setAddress] = React.useState();
+    const [name, setName] = React.useState()
+    const [address, setAddress] = React.useState()
     const onSubmit = (e) => {
-      e.preventDefault();
-      const elements = getElements(e);
-      setName(`name: ${elements.name}`);
-      setAddress(`address: ${elements.address}`);
-    };
+      e.preventDefault()
+      const elements = getElements(e)
+      setName(`name: ${elements.name}`)
+      setAddress(`address: ${elements.address}`)
+    }
 
     return (
       <form onSubmit={onSubmit}>
@@ -26,16 +27,16 @@ test("that it returns all the things in the form", () => {
           Click me!
         </button>
       </form>
-    );
+    )
   }
 
-  const { getByTestId, getByText } = render(<Component />);
+  const { getByTestId, getByText } = render(<Component />)
 
-  fireEvent.input(getByTestId("name"), { target: { value: "Matt" } });
-  fireEvent.input(getByTestId("address"), { target: { value: "Reston" } });
+  fireEvent.input(getByTestId("name"), { target: { value: "Matt" } })
+  fireEvent.input(getByTestId("address"), { target: { value: "Reston" } })
 
-  fireEvent.click(getByTestId("submit"));
+  fireEvent.click(getByTestId("submit"))
 
-  expect(getByText(/name: Matt/i)).toBeInTheDocument();
-  expect(getByText(/address: Reston/i)).toBeInTheDocument();
-});
+  expect(getByText(/name: Matt/i)).toBeInTheDocument()
+  expect(getByText(/address: Reston/i)).toBeInTheDocument()
+})
